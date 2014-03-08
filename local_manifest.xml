@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remove-project name="CyanogenMod/android_hardware_qcom_display-caf" />
-    <remove-project name="CyanogenMod/android_hardware_qcom_media-caf" />
-    <remove-project name="CyanogenMod/android_frameworks_av" />
-    <remove-project name="CyanogenMod/android_packages_apps_SoundRecorder" />
 
-    <project path="hardware/qcom/display-caf" name="TeamHackLG/android_hardware_qcom_display-caf" revision="cm-11.0"/>
-    <project path="hardware/qcom/media-caf" name="TeamHackLG/android_hardware_qcom_media-caf" revision="cm-11.0" />
-    <project path="device/lge/msm7x27a-common" name="TeamHackLG/android_device_lge_msm7x27a-common" revision="cm-11.0" />
-    <project path="device/lge/e610" name="TeamHackLG/android_device_lge_e610" revision="cm-11.0" />
-    <project path="device/lge/p700" name="TeamHackLG/android_device_lge_p700" revision="cm-11.0" />
-    <project path="kernel/lge/msm7x27a-common" name="TeamHackLG/lge-kernel-lproj" revision="android-msm-3.4-kk" />
-    <project path="vendor/lge" name="TeamHackLG/proprietary_vendor_lge" revision="cm-11.0" remote="github"/>
-    <project path="frameworks/av" name="TeamHackLG/android_frameworks_av" revision="cm-11.0" />
-    <project path="packages/apps/SoundRecorder" name="TeamHackLG/android_packages_apps_SoundRecorder" revision="cm-11.0" />
- 
+<remote name="caf"
+           fetch="git://codeaurora.org/"
+           review="codeaurora.org" />
+
+<remote name="CR"
+           fetch="git://github.com/CrystalRoms/" />
+
+<remote name="v6"
+           fetch="git://github.com/androidarmv6/" />
+
+<remote name="google"
+           fetch="http://code.google.com/" />
+
+<remote name="caf"
+           fetch="git://codeaurora.org/"
+           review="codeaurora.org" />
+
+    <remove-project name="CyanogenMod/android_hardware_qcom_display-caf" />
+    <project path="hardware/qcom/display-caf" name="android_hardware_qcom_display-caf" revision="cm-11.0" remote="THLG"/>
+
+    <remove-project name="CyanogenMod/android_hardware_qcom_media-caf" />
+    <project path="hardware/qcom/media-caf" name="android_hardware_qcom_media-caf" revision="cm-11.0" remote="THLG"/>
+
+    <project path="vendor/lge" name="proprietary_vendor_lge" revision="cm-11.0" remote="cr3pt"/>
+    <project path="device/lge/p700" name="android_device_lge_p700" revision="cm-11.0" remote="CRX"/>
+
+    <project path="device/lge/msm7x27a-common" name="android_device_lge_msm7x27a-common" revision="cm-11.0" remote="cr3pt"/>
+    <project path="kernel/lge/msm7x27a-common" name="lge-kernel-lproj" revision="android-msm-3.4-kk-extra" remote="cr3pt"/>
+
+    <remove-project name="android_frameworks_av" />
+    <project path="frameworks/av" name="android_frameworks_av" revision="cm-11.0" remote="CRX"/>
+	
+	<!-- webkit classic test -->
+    <remove-project name="CyanogenMod/android_frameworks_webview" />
+    <remove-project name="CyanogenMod/android_external_chromium_org"/>
+    <project path="external/chromium_org" name="android_external_chromium_org" revision="cm-11.0" remote="cr3pt"/>
+    <project path="external/webkit" name="android_external_webkit" revision="cm-11.0" remote="cr3pt"/>
+	
+	<!-- sound recorder -->
+    <remove-project name="platform/packages/apps/SoundRecorder" />
+    <project path="packages/apps/SoundRecorder" name="android_packages_apps_SoundRecorder" revision="cm-11.0" remote="cr3pt"/>
+
 </manifest>
+
+
