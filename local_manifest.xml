@@ -28,6 +28,7 @@
     <project path="hardware/qcom/media-caf" name="android_hardware_qcom_media-caf" revision="cm-11.0" remote="THLG"/>
 
     <project path="kernel/lge/msm7x27a-common" name="lge-kernel-lproj" revision="android-msm-3.4-kk-extra" remote="cr3pt"/>
+    <project path="kernel/lge/msm7x27a-common-l5" name="lge-kernel-lproj" revision="android-msm-3.4-kk" remote="THLG"/>
 
     <remove-project name="android_frameworks_av" />
     <project path="frameworks/av" name="android_frameworks_av" revision="cm-11.0" remote="CRX"/>
