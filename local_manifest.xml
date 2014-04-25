@@ -1,51 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-<remote name="caf"
-           fetch="git://codeaurora.org/"
-           review="codeaurora.org" />
-
-<remote name="CR"
-           fetch="git://github.com/CrystalRoms/" />
-           
-<remote name="lg"
-           fetch="git://github.com/AOSP4LG/" />
-
-<remote name="v6"
-           fetch="git://github.com/androidarmv6/" />
-
-<remote name="google"
-           fetch="http://code.google.com/" />
-
-<remote name="caf"
-           fetch="git://codeaurora.org/"
-           review="codeaurora.org" />
-
     <remove-project name="CyanogenMod/android_hardware_qcom_display-caf" />
-    <project path="hardware/qcom/display-caf" name="android_hardware_qcom_display-caf" revision="cm-11.0" remote="cr3pt"/>
-
     <remove-project name="CyanogenMod/android_hardware_qcom_media-caf" />
-    <project path="hardware/qcom/media-caf" name="android_hardware_qcom_media-caf" revision="cm-11.0" remote="cr3pt"/>
-
-    <project path="kernel/lge/msm7x27a-common" name="lge-kernel-lproj" revision="android-msm-3.4-kk-extra" remote="cr3pt"/>
-    <project path="kernel/lge/msm7x27a-common-l5" name="lge-kernel-lproj" revision="android-msm-3.4-kk" remote="THLG"/>
-
-    <remove-project name="android_frameworks_av" />
-    <project path="frameworks/av" name="android_frameworks_av" revision="cm-11.0" remote="CRX"/>
-	
-	<!-- webkit classic test -->
-    <remove-project name="CyanogenMod/android_frameworks_webview" />
-    <remove-project name="CyanogenMod/android_external_chromium_org"/>
-    <project path="external/chromium_org" name="android_external_chromium_org" revision="cm-11.0" remote="cr3pt"/>
-    <project path="external/webkit" name="android_external_webkit" revision="cm-11.0" remote="cr3pt"/>
-    
+    <remove-project name="AOSPA-legacy/android_frameworks_av" />
+    <remove-project name="CRXTeam/android_packages_apps_Settings" />
     <remove-project name="android_frameworks_base" />
-    <project path="frameworks/base" name="android_frameworks_base" revision="kitkat_new" remote="CRX"/>
-    
-	<!-- sound recorder -->
-    <remove-project name="platform/packages/apps/SoundRecorder" />
-    <project path="packages/apps/SoundRecorder" name="android_packages_apps_SoundRecorder" revision="cm-11.0" remote="cr3pt"/>
+    <remove-project name="CyanogenMod/android_frameworks_webview" />
 
+
+  <project name="lge-kernel-lproj" path="kernel/lge/msm7x27a-common" remote="CRX" revision="android-msm-3.4-kk-extra" />
+  <project name="android_device_lge_msm7x27a-common" path="device/lge/msm7x27a-common" remote="CRX" revision="AOSPA" />
+  <project name="proprietary_vendor_lge" path="vendor/lge" remote="cr3pt" revision="cm-11.0" />
+
+  <project name="android_frameworks_av" path="frameworks/av" remote="cr3pt" revision="cm-11.0" />
+  <project name="android_hardware_qcom_display-caf" path="hardware/qcom/display-caf" remote="cr3pt" revision="cm-11.0" />
+  <project name="android_hardware_qcom_media-caf" path="hardware/qcom/media-caf" remote="THLG" revision="cm-11.0" />
+  <project name="CRXTeam/android_packages_apps_Settings" path="packages/apps/Settings" remote="cm" revision="kitkat-wip" />
+  <project name="CRXTeam/android_frameworks_base" path="frameworks/base" remote="cm" revision="kitkat_new" />
 </manifest>
-
-
